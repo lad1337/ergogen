@@ -154,6 +154,11 @@ const footprint = exports._footprint = (points, net_indexer, component_indexer, 
         const index = net_indexer(net)
         return net_obj(net, index)
     }
+    parsed_params.global_net = net => {
+        const index = net_indexer(net)
+        return net_obj(net, index)
+    }
+    parsed_params.u = u
 
     return fp.body(parsed_params)
 }
